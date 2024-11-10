@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System of Equations Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Circuit Current Solver</h1>
+        <form id="inputForm">
+            <div class="equation">
+                <label>Equation 1:</label>
+                <input type="number" id="a1" placeholder="a1" required> i1 +
+                <input type="number" id="b1" placeholder="b1" required> i2 +
+                <input type="number" id="c1" placeholder="c1" required> i3 =
+                <input type="number" id="d1" placeholder="d1" required>
+            </div>
+            <div class="equation">
+                <label>Equation 2:</label>
+                <input type="number" id="a2" placeholder="a2" required> i1 +
+                <input type="number" id="b2" placeholder="b2" required> i2 +
+                <input type="number" id="c2" placeholder="c2" required> i3 =
+                <input type="number" id="d2" placeholder="d2" required>
+            </div>
+            <div class="equation">
+                <label>Equation 3:</label>
+                <input type="number" id="a3" placeholder="a3" required> i1 +
+                <input type="number" id="b3" placeholder="b3" required> i2 +
+                <input type="number" id="c3" placeholder="c3" required> i3 =
+                <input type="number" id="d3" placeholder="d3" required>
+            </div>
+            <button type="button" onclick="calculate()">Solve</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
