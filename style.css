@@ -1,8 +1,9 @@
-/* General page styling */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(270deg, #8e44ad, #3498db, #ff7e5f, #feb47b);
-    background-size: 800% 800%;
+    font-family: 'Lexend', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 400% 400%;
     color: #f4f4f9;
     display: flex;
     justify-content: center;
@@ -10,32 +11,35 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    animation: gradientAnimation 12s ease infinite;
+    animation: bgShift 15s ease infinite;
 }
 
-@keyframes gradientAnimation {
+/* Animated background gradient */
+@keyframes bgShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     padding: 2em;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    border: 2px solid #6a89cc;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     text-align: center;
     width: 90%;
-    max-width: 500px;
+    max-width: 480px;
     animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 h1 {
-    font-size: 2rem;
-    color: #ffd700;
-    text-shadow: 2px 2px 5px #333;
-    margin-bottom: 1em;
+    font-size: 2.4rem;
+    color: #ffeaa7;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
+    margin-bottom: 1em;
 }
 
 .equation {
@@ -44,13 +48,13 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
     color: #f7f1e3;
 }
 
 label {
-    font-weight: bold;
-    color: #ffeaa7;
+    font-weight: 600;
+    color: #eccc68;
 }
 
 input[type="number"] {
@@ -59,47 +63,52 @@ input[type="number"] {
     border: none;
     border-radius: 8px;
     text-align: center;
-    font-size: 1rem;
-    background: rgba(255, 255, 255, 0.85);
-    color: #555;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #444;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-input[type="number"]:focus {
+input[type="number"]:hover, input[type="number"]:focus {
+    border: 1px solid #ff6b6b;
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     outline: none;
+    box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
 }
 
 button {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    background: linear-gradient(135deg, #6a89cc, #b8e994);
     color: #fff;
-    padding: 0.7em 2em;
+    padding: 0.8em 2em;
     border: none;
-    border-radius: 8px;
+    border-radius: 15px;
     font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(106, 137, 204, 0.4);
 }
 
 button:hover {
-    background: linear-gradient(135deg, #feb47b, #ff7e5f);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 126, 95, 0.4);
+    background: linear-gradient(135deg, #f368e0, #ff9f43);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(243, 104, 224, 0.4);
 }
 
 #result {
     margin-top: 1.5em;
-    font-size: 1.2rem;
-    color: #fff;
+    font-size: 1.3rem;
+    color: #f4f4f9;
     padding: 1em;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
+    border: 2px solid #f368e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 0.8s ease-in-out;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
-/* Keyframe animations */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
