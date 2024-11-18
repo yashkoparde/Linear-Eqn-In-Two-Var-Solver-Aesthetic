@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System of Equations Solver</title>
-    <p> Tired of Boring Calci? Try this easier way to solve equation to et the i1 i2 i3 Values! <p>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Circuit Current Solver</h1>
-        <form id="inputForm">
-            <div class="equation">
-                <label>Equation 1:</label>
-                <input type="number" id="a1" placeholder="a1" required> i1 +
-                <input type="number" id="b1" placeholder="b1" required> i2 +
-                <input type="number" id="c1" placeholder="c1" required> i3 =
-                <input type="number" id="d1" placeholder="d1" required>
-            </div>
-            <div class="equation">
-                <label>Equation 2:</label>
-                <input type="number" id="a2" placeholder="a2" required> i1 +
-                <input type="number" id="b2" placeholder="b2" required> i2 +
-                <input type="number" id="c2" placeholder="c2" required> i3 =
-                <input type="number" id="d2" placeholder="d2" required>
-            </div>
-            <div class="equation">
-                <label>Equation 3:</label>
-                <input type="number" id="a3" placeholder="a3" required> i1 +
-                <input type="number" id="b3" placeholder="b3" required> i2 +
-                <input type="number" id="c3" placeholder="c3" required> i3 =
-                <input type="number" id="d3" placeholder="d3" required>
-            </div>
-            <button type="button" onclick="calculate()">Solve</button>
-        </form>
-        <div id="result"></div>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <div class="container text-center">
+      <h1 class="name">[Your Name]</h1>
+      <p class="tagline">Tech Enthusiast | Web Developer | Generative AI Innovator</p>
     </div>
-    <footer>
-    <p>&copy; 2024 Yash Koparde. All Rights Reserved.</p>
+    <div class="floating-circles"></div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-section py-5 text-center">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>A passionate developer fluent in cutting-edge web and app development, UI/UX trends, and generative AI.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Portfolio</h2>
+      <div class="row g-4">
+        <!-- Project Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="portfolio-item">
+            <h3>Project 1</h3>
+            <p class="project-description">Dynamic task manager application with interactive UI.</p>
+            <div class="project-links">
+              <button class="btn btn-primary" onclick="toggleLinks(this)">
+                <i class="fas fa-folder-open"></i> Links
+              </button>
+              <div class="links-dropdown">
+                <a href="https://github.com/your-repo-link" target="_blank">
+                  <i class="fab fa-github"></i> GitHub Repo
+                </a>
+                <a href="https://live-project-link.com" target="_blank">
+                  <i class="fas fa-external-link-alt"></i> Live Project
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add similar cards for other projects -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section py-5 text-center">
+    <div class="container">
+      <h2>My Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-item">TypeScript</div>
+        <div class="skill-item">JavaScript</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">React</div>
+        <div class="skill-item">Node.js</div>
+        <div class="skill-item">Flask</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">Next.js</div>
+        <div class="skill-item">Flutter</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-3 text-center">
+    <p>© 2024 [Your Name]. All Rights Reserved.</p>
   </footer>
-    <script src="script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
