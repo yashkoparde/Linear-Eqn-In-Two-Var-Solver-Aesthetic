@@ -1,115 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;600&display=swap');
-
+/* Global Styles */
 body {
-    font-family: 'Lexend', sans-serif;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    background-size: 400% 400%;
-    color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
-    animation: bgShift 15s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #007bff, #6f42c1);
+  color: white;
+  overflow-x: hidden;
 }
 
-/* Animated background gradient */
-@keyframes bgShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 2em;
-    border-radius: 20px;
-    border: 2px solid #6a89cc;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 480px;
-    animation: fadeIn 1s ease-in-out;
-    backdrop-filter: blur(10px);
+.hero-section .name {
+  font-size: 4rem;
+  font-weight: bold;
+  animation: fadeIn 1.5s;
 }
 
-h1 {
-    font-size: 2.4rem;
-    color: #ffeaa7;
-    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.4);
-    letter-spacing: 1px;
-    margin-bottom: 1em;
+.hero-section .tagline {
+  font-size: 1.5rem;
+  margin-top: 10px;
 }
 
-.equation {
-    margin: 1em 0;
-    font-size: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    color: #f7f1e3;
+.floating-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('path-to-your-animation.png');
+  background-size: cover;
+  animation: moveCircles 20s infinite linear;
 }
 
-label {
-    font-weight: 600;
-    color: #eccc68;
+/* Portfolio Cards */
+.portfolio-item {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-input[type="number"] {
-    width: 3em;
-    padding: 0.5em;
-    border: none;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.9);
-    color: #444;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
-input[type="number"]:hover, input[type="number"]:focus {
-    border: 1px solid #ff6b6b;
-    transform: scale(1.1);
-    outline: none;
-    box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
+.project-links {
+  margin-top: 10px;
+  position: relative;
 }
 
-button {
-    background: linear-gradient(135deg, #6a89cc, #b8e994);
-    color: #fff;
-    padding: 0.8em 2em;
-    border: none;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 25px rgba(106, 137, 204, 0.4);
+.links-dropdown {
+  display: none;
+  background: #444;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  z-index: 10;
 }
 
-button:hover {
-    background: linear-gradient(135deg, #f368e0, #ff9f43);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(243, 104, 224, 0.4);
+.links-dropdown a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
 }
 
-#result {
-    margin-top: 1.5em;
-    font-size: 1.3rem;
-    color: #f4f4f9;
-    padding: 1em;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid #f368e0;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.8s ease-in-out;
+.links-dropdown a:hover {
+  color: #17a2b8;
 }
 
-/* Animations */
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.skill-item {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  animation: fadeIn 1.5s;
+}
+
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes moveCircles {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
 }
